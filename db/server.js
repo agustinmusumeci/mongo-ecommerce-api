@@ -1,9 +1,12 @@
 import mongodb from "./mongo.js";
+import * as dotenv from "dotenv";
 import express from "express";
 import router from "../routes/router.js";
 import cors from "cors";
 
-const PORT = 4000
+dotenv.config();
+
+const PORT = process.env.PORT;
 const app = express();
 
 // middlewares
