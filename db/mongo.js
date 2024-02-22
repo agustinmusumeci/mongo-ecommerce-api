@@ -3,7 +3,7 @@ import * as dotenv from "dotenv";
 
 dotenv.config();
 
-const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
+const clientOptions = { serverApi: { version: '1', strict: false, deprecationErrors: false } };
 
 const URI = process.env.URI
 
@@ -18,6 +18,7 @@ const mongodb = async() => {
         await mongoose.connection.db.admin().command({ ping: 1 });
         console.log("You successfully connected to MongoDB!");
     } catch(error) {
+        console.log("Error - ", error)
         await mongoose.disconnect();
     }
 }

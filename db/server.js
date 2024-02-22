@@ -24,4 +24,4 @@ app.listen(PORT, () => {
     console.log("Server running")
 })
 
-mongodb()
+mongodb();
