@@ -5,6 +5,7 @@
   "main": "./db/server.js",
   "type": "module",
   "scripts": {
+    "start": "node db/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +15,10 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.3"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
