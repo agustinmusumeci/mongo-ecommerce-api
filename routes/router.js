@@ -53,7 +53,7 @@ router.post("/login-api", async (req, res) => {
 
 router.get("/get-products-api", async (req, res) => {
     try {
-        const products = await ProductSchema.find();
+        const products = await ProductSchema.find([]);
         res.status(200).json(products);
     } catch (error) {
         console.log("Getting products error - ", error)
